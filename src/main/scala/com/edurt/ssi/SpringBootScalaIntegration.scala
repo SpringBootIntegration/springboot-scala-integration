@@ -6,7 +6,8 @@ import org.springframework.context.annotation.ComponentScan
 
 @SpringBootApplication
 @ComponentScan(value = Array(
-  "com.edurt.ssi.controller"
+  "com.edurt.ssi.controller",
+  "com.edurt.ssi.view"
 ))
 class SpringBootScalaIntegration
 
