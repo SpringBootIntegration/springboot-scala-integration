@@ -10,7 +10,7 @@ SpringBoot Scala Integration is a open source springboot, scala integration exam
 |:---:|---|
 |Java|1.8+|
 |SpringBoot|2.1.x|
-|Kotlin|2.12.x|
+|Scala|2.12.x|
 
 ### Contributors(In no particular order)
 
