@@ -3,7 +3,8 @@ package com.edurt.ssi.controller
 import com.edurt.ssi.model.UserModel
 import com.edurt.ssi.service.UserService
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.web.bind.annotation.{PathVariable, PostMapping, RequestMapping, RestController}
+import org.springframework.data.domain.{Page, PageRequest}
+import org.springframework.web.bind.annotation._
 
 @RestController
 @RequestMapping(value = Array("user"))
@@ -19,5 +20,8 @@ class UserController @Autowired()(
     userModel.name = name
     return this.userService.save(userModel).id
   }
+
+  @GetMapping(value = Array("list"))
+  def get(): Page[UserModel] = this.userService.getAll(PageRequest.of(0, 10))
 
 }
